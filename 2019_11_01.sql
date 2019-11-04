@@ -190,7 +190,7 @@ FROM
         LENGTH('HELLO, WORLD')length,
         INSTR('HELLO, WORLD','O') instr,
         -- INSTR(문자열, 찾을 문자열, 문자열의 특정 위치 이후 표시)
-        INSTR('HELLO,WORLD','O'6) instr, 
+        INSTR('HELLO,WORLD','O',6) instr, 
     -- LPAD(문자열, 전체 문자열길이, 문자열이 전체 문자열 길이에 미치지 못할 경우 추가할 문자); 
         LPAD('HELLO,WORLD',15,'*') lpad,
         LPAD('HELLO,WORLD',15) lpad,
