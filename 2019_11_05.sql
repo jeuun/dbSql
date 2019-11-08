@@ -121,8 +121,8 @@ FROM users;
 SELECT MAX(sal) max_sal, MIN(sal) min_sal
 FROM emp;
 
---부서별 가장 높은 급여를 받는사람의 급여
---GROUP BY 절에 기술되지 않은 컬럼이 SELECT 절에 기술될 경우 에러
+-- 부서별 가장 높은 급여를 받는사람의 급여
+-- GROUP BY 절에 기술되지 않은 컬럼이 SELECT 절에 기술될 경우 에러
 SELECT deptno, 'test', 1, MAX(sal) max_sal, MIN(sal) min_sal,
        ROUND(AVG(sal), 2) avg_sal,
        SUM(sal) sum_sal,
@@ -134,13 +134,13 @@ FROM emp
 GROUP BY deptno;
 
 
---부서별 최대 급여
+-- 부서별 최대 급여
 SELECT deptno, MAX(sal) max_sal
 FROM emp
 GROUP BY deptno
 HAVING MAX(sal) > 3000;
 
---grp1
+-- grp1
 SELECT MAX(sal) max_sal, MIN(sal) min_sal,
        ROUND(AVG(sal), 2) avg_sal,
        SUM(sal) sum_sal,
@@ -149,7 +149,7 @@ SELECT MAX(sal) max_sal, MIN(sal) min_sal,
        COUNT(*) count_all
 FROM emp;
 
---grp1
+-- grp1
 SELECT deptno, MAX(sal) max_sal, MIN(sal) min_sal,
        ROUND(AVG(sal), 2) avg_sal,
        SUM(sal) sum_sal,
